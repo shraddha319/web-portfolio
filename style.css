@@ -105,7 +105,9 @@ main {
 .hero .hero-text {
     text-align: center;
     color: var(--dark-gray);
-    font-size: 40px;
+    font-size: 1.5rem;
+    width: 400px;
+    margin: auto;
 }
 
 .section {
@@ -141,23 +143,23 @@ main {
     font-size: 1.2rem;
 }
 
-.projects {
+.projects, .blogs {
     border: 1px solid black;
     border-radius: 1rem;
     padding: 1rem;
     margin: 2rem;
 }
 
-.projects .project-header {
+.projects .project-header, .blogs .blog-header {
     font-weight: bold;
     font-size: 2rem;
 }
 
-.project-tags {
+.project-tags, .blog-tags {
     padding-inline-start: 0px;
 }
 
-.projects .tag{
+.projects .tag, .blogs .tag{
     border: 1px solid black;
     border-radius: 0.4rem;
     padding: 0.2rem;
@@ -167,7 +169,13 @@ main {
     color: var(--background-color);
 }
 
-.projects .project-text {
+.projects .project-description, .blogs .blog-description {
     padding: 1rem 0rem;
     font-size: 1.2rem;
+}
+
+.text-content {
+    color: var(--primary-color);
+    text-align: justify;
+    line-height: 1.6rem;;
 }
