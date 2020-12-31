@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+
+
+
+:root {
+    --primary-color: black;
+    --background-color: white;
+    --dark-gray: rgb(117, 120, 124); 
+    --off-white: #D1D5DB;
+} 
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: 'Inconsolata', monospace;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background-color);
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+.container {
+   padding: 0rem 1rem;
+}
+
+.container-center {
+    width: 800px;
+    margin: auto;
+}
+
+.button {
+    border: 1px solid var(--primary-color);
+    border-radius: 1rem;
+}
+
+.link{
+    /* remove underline, purple color in a tag */
+    text-decoration: none;
+}
+
+.link-primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.link-secondary {
+    color: var(--primary-color);
+}
+
+.list-no-bullets {
+    /* remove bullets from ul tag*/
+    list-style: none;
+}
+
+.list-item-inline {
+    display: inline-block;
+    padding: 0.2rem;
+    margin: 0.2rem;
+}
+
+.navigation {
+    color: var(--primary-color);
+    margin-top: 1rem;
+    background-color: var(--background-color);
+}
+
+.navigation .nav-brand {
+    display: inline-block;
+    margin: 2rem;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.navigation .nav-pills {
+    text-align: right;
+    display: inline;
+    font-size: 1.2rem;
+}
+
+.navigation .nav-pills .link{
+    color: var(--dark-gray);
+}
+
+.nav-brand, .link {
+    color: var(--primary-color);
+}
+
+.hero .hero-image {
+    display: block;
+    max-width: 300px;
+    border-radius: 50%;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+
+.hero .hero-text {
+    text-align: center;
+    color: var(--dark-gray);
+    font-size: 40px;
+}
+
+.section {
+    padding: 2rem;
+}
+
+.section h1 {
+    text-align: center;
+}
+
+.section-off-white {
+    background-color: var(--off-white);
+}
+
+.footer {
+    flex-shrink: 0;
+    background-color: var(--background-color);
+    color: var(--primary-color);
+    text-align: center;
+}
+
+.footer .link, .footer-header {
+    color: var(--dark-gray);
+}
+
+.footer .footer-social-links li {
+    margin: 0.2rem;
+    padding: 0.2rem;
+}
+
+.footer .footer-header {
+    padding: 0.2rem;
+    margin: 1rem;
+    font-size: 1.2rem;
+}
