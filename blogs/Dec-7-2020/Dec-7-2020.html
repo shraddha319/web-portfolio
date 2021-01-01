@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Client side and server side rendering</title>
+    <style>
+    </style>
+
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+    <style>
+        .task-list-item {
+            list-style-type: none;
+        }
+
+        .task-list-item-checkbox {
+            margin-left: -20px;
+            vertical-align: middle;
+        }
+    </style>
+    <link href="../../style.css" rel="stylesheet"/>
+    <script src="https://kit.fontawesome.com/b704b7e4ad.js" crossorigin="anonymous"></script>
+
+
+
+</head>
+
+<body class="vscode-body vscode-light container-center">
+
+    <nav class="navigation">
+        <div class="nav-brand link">
+            <a class="link" href="../../index.html">
+                Shraddha
+            </a>
+        </div>
+        <ul class="list-no-bullet nav-pills">
+            <li class="list-item-inline">
+                <a class="link" href="../../about.html">About</a>
+            </li>
+            <li class="list-item-inline">
+                <a class="link" href="../../projects.html">Projects</a>
+            </li>
+            <li class="list-item-inline">
+                <a class="link" href="../../blog.html">Blog</a>
+            </li>
+            <li class="list-item-inline">
+                <a class="link button" href="../../shraddhaResume.pdf">Resume</a>
+            </li>
+        </ul>
+    </nav>
+
+    <main class="text-content">
+    <h1 id="client-side-and-server-side-rendering">Client-side and server-side Rendering</h1>
+    <p>The traditional method for fetching and rendering content on the browser has always been server-side rendering.It was the most suitable method back then since most content on the web were static text and images, with very
+        minimal user interactivity. Over the years, web applications have become more complex and provide a wide range
+        of user interactions. They are no longer static sites, but rather full end applications that can be used to
+        shop, submit forms, chat, etc.
+    </p>
+    <h2 id="what-is-server-and-client-side-rendering">what is server and client side rendering?</h2><hr>
+    <blockquote>
+        <p><em>Server rendering generates the full HTML for a page on the server in response to navigation. This avoids
+                additional round-trips for data fetching and templating on the client, since it’s handled before the
+                browser gets a response. Client-side rendering (CSR) means rendering pages directly in the browser using
+                JavaScript. All logic, data fetching, templating and routing are handled on the client rather than the
+                server.</em> <br>
+            <a href="https://developers.google.com/web/updates/2019/02/rendering-on-the-web">Rendering on the Web  | 
+                Google Developers</a></p>
+    </blockquote>
+    <p>When we visit a site on our browser, a request is made to the server for the resources to render the
+        corresponding web page (HTML, style sheets, scripts, images, etc). In server side rendering, the response to
+        this is a fully rendered HTML that will be then displayed on the user browser. This means that all the scripts
+        that are needed to generate the content of the page (say, customized content for each user) will be compiled on
+        the server. The final HTML that is to be displayed will be returned from the server to the client browser. In
+        client side rendering, the server returns the boilerplate HTML document along with the Javascript files that
+        will render the rest of the content on the client browser. The HTML document contains the basic necessary static
+        wrapper for the site. The dynamic content of the pages will be rendered by the Javascript running on the client
+        browser. The use of client side rendering became popular with introduction of powerful Javascript libraries like
+        React.js, Angular and Vue.js.</p>
+    
+        <span style="margin:auto">
+            <img style="display:inline; width:395px; height: 350px;" src="https://miro.medium.com/max/707/1*jJkEQpgZ8waQ5P-W5lhxuQ.png" alt="">
+            <img style="display:inline; width:395px; height: 350px;" src="https://miro.medium.com/max/707/1*CRiH0hUGoS3aoZaIY4H2yg.png" alt="">
+            <p><em>Image source: <a
+                href="https://medium.com/walmartlabs/the-benefits-of-server-side-rendering-over-client-side-rendering-5d07ff2cefe8">Walmart
+                Labs Engineering Blog</a></em>
+            </p>
+        </span>
+    
+    <h2 id="only-update-whats-necessary">Only Update What’s Necessary</h2><hr>
+    <p>In SSR, each time we visit a new page on the website, the browser makes a new request to the server. It does not
+        matter if the new page has only a few sections different from the current page, the browser will make a request
+        for the new page and re-render it from scratch. For example, most web sites have a common navigation bar and
+        footer for all the pages. In SSR, the resources to render these components will be requested each time a new
+        page on the site is visited. It does not matter if the resources are already present on the browser. This slows
+        down user experience, increases server load and prevents use of the application when the user is disconnected
+        from the server.
+        In CSR, all the reources/scripts required to render all the pages are loaded in advance during the first
+        request. Thus, subsequest navigation in the site does not involve requesting for the same resources again from
+        the server. For example, if a page contains a link to display new additional content, the browser does not make
+        a new request to the server. Instead the JS libraries will load the new content and only that is rendered,
+        leaving the other sections untouched.</p>
+    <h2 id="load-time-difference">Difference in load time</h2><hr>
+    <p>Web page load time refers to the time between making a request to the server and the content getting rendered on
+        the browser. The way the web pages are rendered differs in the SSR and CSR appraoches, thus the load time
+        differs as well. During the first load, SSR requests a pre-compiled HTML document whereas in CSR the HTML, style
+        sheets and the scripts required are first downloaded and then compiled on the browser, thus it is relatively
+        slower compared to SSR. However, for the subsequent pages, the complete request cycle is repeated in SSR. CSR
+        does not have to make further requests since it has all the scripts loaded in advance and is thus faster.</p>
+    <p><em>[To be updated]</em></p>
+
+    </main>
+
+    <footer class="footer">
+        <ul class="footer-social-links list-no-bullets">
+            <li class="list-item-inline">
+                <a class="link" href="mailto:shraddha.jain3219@gmail.com">
+                    <i class="fas fa-envelope fa-2x"></i>
+                </a>
+            </li>
+
+            <li class="list-item-inline">
+                <a class="link" href="https://github.com/shraddha319">
+                    <i class="fab fa-github fa-2x"></i>
+                </a>
+            </li>
+
+            <li class="list-item-inline">
+                <a class="link" href="https://www.linkedin.com/in/shraddha-s/">
+                    <i class="fab fa-linkedin-in fa-2x"></i>
+                </a>
+            </li>
+
+            <li class="list-item-inline">
+                <a class="link" href="">
+                    <i class="fab fa-twitter fa-2x"></i>
+                </a>
+            </li>
+
+            <li class="list-item-inline">
+                <a class="link" href="">
+                    <i class="fab fa-instagram fa-2x"></i>
+                </a>
+            </li>
+
+        </ul>
+        <div class="footer-header">
+            <i class="fas fa-code fa-1x"></i>
+            <span> by 
+                <strong> Shraddha</strong> 
+                made with 
+            </span>
+            <i class="fas fa-coffee"></i>
+        </div>
+    </footer>
+
+</body>
+
+</html>
