@@ -144,7 +144,7 @@ main {
 }
 
 .projects, .blogs {
-    border: 1px solid black;
+    border: 1px solid var(--dark-gray);
     border-radius: 1rem;
     padding: 1rem;
     margin: 2rem;
@@ -177,5 +177,6 @@ main {
 .text-content {
     color: var(--primary-color);
     text-align: justify;
-    line-height: 1.6rem;;
+    line-height: 2rem;
+    font-size: 1.4rem;
 }
