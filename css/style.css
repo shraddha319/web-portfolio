@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+
+
+
+:root {
+    --primary-color: black;
+    --background-color: white;
+    --dark-gray: rgb(117, 120, 124); 
+    --off-white: #D1D5DB;
+    --content-size: 1.2rem;
+} 
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: 'Inconsolata', monospace;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background-color);
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+.container {
+   padding: 0rem 1rem;
+}
+
+.container-center {
+    width: 800px;
+    margin: auto;
+}
+
+.button {
+    border: 1px solid var(--primary-color);
+    border-radius: 0.4rem;
+    padding: 0.2rem;
+    margin: 0.4rem;
+}
+
+.link{
+    /* remove underline, purple color in a tag */
+    text-decoration: none;
+}
+
+.link-primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.link-secondary {
+    color: var(--primary-color);
+}
+
+.list-no-bullets {
+    /* remove bullets from ul tag*/
+    list-style: none;
+}
+
+.list-item-inline {
+    display: inline;
+    padding: 0.2rem;
+    margin: 0.2rem;
+}
+
+.navigation {
+    color: var(--primary-color);
+    margin-top: 1rem;
+    background-color: var(--background-color);
+}
+
+.navigation .nav-brand {
+    display: inline-block;
+    margin: 2rem;
+    font-size: 2rem;
+}
+
+.navigation #cursor {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.navigation .nav-pills {
+    text-align: right;
+    display: inline;
+    font-size: 1.2rem;
+}
+
+.navigation .nav-pills .link{
+    color: var(--dark-gray);
+}
+
+.nav-brand, .link {
+    color: var(--primary-color);
+}
+
+.hero .hero-image {
+    display: block;
+    max-width: 300px;
+    border-radius: 50%;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+
+.hero .hero-text {
+    text-align: center;
+    color: var(--dark-gray);
+    font-size: 1.5rem;
+    width: 400px;
+    margin: auto;
+}
+
+.section {
+    padding: 1rem;
+    text-align: left;
+    font-size: var(--content-size);
+}
+
+.section h3 {
+    text-align: left;
+}
+
+
+.footer {
+    flex-shrink: 0;
+    background-color: var(--background-color);
+    color: var(--primary-color);
+    text-align: center;
+}
+
+.footer .link, .footer-header {
+    color: var(--dark-gray);
+}
+
+.footer .footer-social-links li {
+    margin: 0.2rem;
+    padding: 0.2rem;
+}
+
+.footer .footer-header {
+    padding: 0.2rem;
+    margin: 1rem;
+    font-size: 1.2rem;
+}
+
+.projects, .blogs {
+    border: 1px solid var(--dark-gray);
+    border-radius: 1rem;
+    padding: 1rem;
+    margin: 2rem;
+}
+
+.projects .project-header, .blogs .blog-header {
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.project-tags, .blog-tags {
+    padding-inline-start: 0px;
+}
+
+.projects .tag, .blogs .tag{
+    border: 1px solid black;
+    border-radius: 0.4rem;
+    padding: 0.2rem;
+    margin: 0.2rem;
+    font-size: 1rem;
+    background-color: var(--primary-color);
+    color: var(--background-color);
+}
+
+.projects .project-description, .blogs .blog-description {
+    padding: 1rem 0rem;
+    font-size: 1.2rem;
+}
+
+.text-content {
+    color: var(--primary-color);
+    text-align: justify;
+    line-height: 2rem;
+    font-size: 1.4rem;
+}
