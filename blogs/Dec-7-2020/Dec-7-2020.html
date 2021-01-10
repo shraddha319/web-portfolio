@@ -4,53 +4,29 @@
 <head>
     <meta charset="UTF-8">
     <title>Client side and server side rendering</title>
-    <style>
-    </style>
 
     <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
     <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
-    <style>
-        .task-list-item {
-            list-style-type: none;
-        }
-
-        .task-list-item-checkbox {
-            margin-left: -20px;
-            vertical-align: middle;
-        }
-    </style>
-    <link href="../../css/style.css" rel="stylesheet"/>
+        
+    <link href="/css/style.css" rel="stylesheet"/>
     <script src="https://kit.fontawesome.com/b704b7e4ad.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script>
+        $(function() {
+            $("#navigation").load("/components/navigation.html");
+            $("#footer").load("/components/footer.html");
+        });
+    </script>
 
 
 
 </head>
 
-<body class="vscode-body vscode-light container-center">
+<body class="container-center">
 
-    <nav class="navigation">
-        <div class="nav-brand link">
-            <a class="link" href="../../index.html">
-                Shraddha
-            </a>
-        </div>
-        <ul class="list-no-bullet nav-pills">
-            <li class="list-item-inline">
-                <a class="link" href="../../about.html">About</a>
-            </li>
-            <li class="list-item-inline">
-                <a class="link" href="../../projects.html">Projects</a>
-            </li>
-            <li class="list-item-inline">
-                <a class="link" href="../../blog.html">Blog</a>
-            </li>
-            <li class="list-item-inline">
-                <a class="link button" href="../../shraddhaResume.pdf">Resume</a>
-            </li>
-        </ul>
-    </nav>
+    <div id="navigation"></div>
 
     <main class="text-content">
     <h1 id="client-side-and-server-side-rendering">Client-side and server-side Rendering</h1>
@@ -109,53 +85,10 @@
         sheets and the scripts required are first downloaded and then compiled on the browser, thus it is relatively
         slower compared to SSR. However, for the subsequent pages, the complete request cycle is repeated in SSR. CSR
         does not have to make further requests since it has all the scripts loaded in advance and is thus faster.</p>
-    <p><em>[To be updated]</em></p>
-
     </main>
 
-    <footer class="footer">
-        <ul class="footer-social-links list-no-bullets">
-            <li class="list-item-inline">
-                <a class="link" href="mailto:shraddha.jain3219@gmail.com">
-                    <i class="fas fa-envelope fa-2x"></i>
-                </a>
-            </li>
-
-            <li class="list-item-inline">
-                <a class="link" href="https://github.com/shraddha319">
-                    <i class="fab fa-github fa-2x"></i>
-                </a>
-            </li>
-
-            <li class="list-item-inline">
-                <a class="link" href="https://www.linkedin.com/in/shraddha-s/">
-                    <i class="fab fa-linkedin-in fa-2x"></i>
-                </a>
-            </li>
-
-            <li class="list-item-inline">
-                <a class="link" href="">
-                    <i class="fab fa-twitter fa-2x"></i>
-                </a>
-            </li>
-
-            <li class="list-item-inline">
-                <a class="link" href="">
-                    <i class="fab fa-instagram fa-2x"></i>
-                </a>
-            </li>
-
-        </ul>
-        <div class="footer-header">
-            <i class="fas fa-code fa-1x"></i>
-            <span> by 
-                <strong> Shraddha</strong> 
-                made with 
-            </span>
-            <i class="fas fa-coffee"></i>
-        </div>
-    </footer>
-
+    <div id="footer"></div>
+<script src="/js/app.js"></script>
 </body>
 
 </html>
