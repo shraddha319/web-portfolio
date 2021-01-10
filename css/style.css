@@ -14,6 +14,10 @@ html {
     height: 100%;
 }
 
+hr {
+    color: var(--dark-gray);
+}
+
 body {
     font-family: 'Inconsolata', monospace;
     height: 100%;
@@ -148,9 +152,16 @@ main {
     font-size: 1.2rem;
 }
 
-.projects, .blogs {
+.blogs {
     border: 1px solid var(--dark-gray);
-    border-radius: 1rem;
+    border-radius: 1rem;;
+    padding: 1rem;
+    margin: 2rem;
+}
+
+.projects {
+    border-left: 0.3rem solid;
+    border-color: var(--dark-gray);
     padding: 1rem;
     margin: 2rem;
 }
@@ -177,6 +188,7 @@ main {
 .projects .project-description, .blogs .blog-description {
     padding: 1rem 0rem;
     font-size: 1.2rem;
+    width: inherit;
 }
 
 .text-content {
@@ -185,3 +197,13 @@ main {
     line-height: 2rem;
     font-size: 1.4rem;
 }
+
+.project-live a {
+    font-size: 1.2rem;
+    padding: 0.2rem;
+    color: #374151;
+    border: 1px var(--off-white) solid;
+}
+
+
+
