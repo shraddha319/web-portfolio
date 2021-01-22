@@ -222,7 +222,7 @@ main {
 .skill-header {
     margin-top: 1.5rem;
     margin-bottom: 0.5rem;
-    text-decoration: underline;
+    color: var(--dark-gray);
 }
 
 .skill-domain h1 {
@@ -236,8 +236,8 @@ main {
 }
 
 .skill-container {
-    margin: 0.5rem;
-    padding: 0.5rem;
+    margin: 0.7rem;
+    padding: 0.7rem;
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
@@ -246,10 +246,20 @@ main {
     height: 10vh;
 }
 
-
-
 .skill-container p {
     visibility: hidden;
+    position: relative;
+    font-size: 1rem;
+    color: var(--off-white);
+    background-color: var(--dark-gray);
+    text-align: center;
+    padding: 0.2rem;
+    top: -3.5rem;
+    border-radius: 0.2rem;;
+}
+
+.skill-container:hover p {
+    visibility: visible;
 }
 
 .skill-container img {
