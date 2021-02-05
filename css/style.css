@@ -162,14 +162,8 @@ main {
     font-size: 1.2rem;
 }
 
-.blogs {
-    border: 1px solid var(--dark-gray);
-    border-radius: 1rem;;
-    padding: 1rem;
-    margin: 2rem;
-}
 
-.projects {
+.projects, .blogs {
     border-left: 0.3rem solid;
     border-color: var(--dark-gray);
     padding: 1rem;
