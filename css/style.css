@@ -36,8 +36,9 @@ main {
 }
 
 .container-center {
-    width: 900px;
-    margin: auto;
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 .button {
